@@ -1,0 +1,29 @@
+#mainContent {
+	font-family: Georgia;
+	font-size: 24;
+	font-weight: normal;
+	text-align: center;
+}	
+.buttonStyle {
+	background-color: orange;
+	font-weight: bold;
+	color: #663300;
+	border-radius: 25px;
+    padding: 20px; 
+    width: 200px;
+    height: 150px;
+}
+.buttonStyle:hover {
+	border: thin solid #FFCC00;
+	background-color: cyan;
+	cursor: pointer;
+}
+.buttonStyle:active {
+	border: thin solid #99CC00;
+	background-color: orange;
+	color: #669900;
+	cursor: pointer;
+}
+.table {
+    font-weight: normal;
+}
