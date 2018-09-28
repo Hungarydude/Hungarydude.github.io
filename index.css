@@ -1,16 +1,25 @@
-.h1 {
+* {
+	background-color: #ff6200;
+	margin-left: 10px
+}
+#title {
 	font-family: Georgia;
-	font-size: 72;
+	font-size: 36px;
 	font-style: normal;
 	text-decoration: underline;
-	margin-top: 50px;	
-	margin-left: 50px;
+	margin-top: 0px;	
+	margin-left: 20px;
+	width: 45%;
+	
 }
 #mainContent {
 	font-family: Georgia;
-	font-size: 24;
+	font-size: 48px;
 	font-weight: normal;
 	text-align: center;
+	width: 40%;
+	height: 50%;
+	margin-top: 50px 
 }	
 .buttonStyle {
 	background-color: orange;
