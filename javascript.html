@@ -47,14 +47,23 @@
 </th>
 </table>
 <body>
-    <button type="button" onClick=clickme() >Yeetus Thy Fetus</button>
+    <button type="button" onClick=clickme()>Yeetus Thy Fetus</button>
     <p id="ptext">This is about to get epic</p>
     
-    <button type="buton" onClick=clickme() >Useless Bot</button>
+    <button type="buton" onClick=clickme()>Useless Bot</button>
     
-    <button type="button" onClick=oof() >Addition Bot</button>
+    <button type="button" onClick=oof()>Addition Bot</button>
     <p id="oof">108+134+890+2</p>
+    
+    <button id="picButton" type="button" onClick=picChange()>Epic Gamer Button</button>
+    
+    <img id="image" src="minecraft.png"></img>
+    
+    <button id="showImg" type="button" onClick="showImg()">Show</button>
+    <button id="hideImg" type="button" onClick="hideImg()">Hide</button>
     <script>
+    var state = "minecraft";
+    
   function clickme(){
     var ptext = document.getElementById('ptext');
     ptext.innerHTML = 'Hello me old chum. Im gnot a gnelf. Im gnot a ganobblin. Im a gnome and youve been gnomed! Ho ho ho ha ha ha ho ho ho he he ha.';
@@ -67,6 +76,49 @@
     oof.innerHTML = e;
     oof.style.color = "#ff0000";
   }
+  function picChange(){
+    if (state == "minecraft"){
+      image.src = "ligma.jpg";
+      button.innerHTML = "Not So Epic Huh?";
+      state = "fortnite";
+    }
+    else if (state == "fortnite"){
+      image.src = "okhand.png";
+      button.innerHTML = "Gottem";
+      state = "okhand";
+    }
+    else if (state == "okhand"){
+      image.src = "backpack.jpg";
+      button.innerHTML = "Oof";
+      state = "backpack";
+    }
+    else if (state == "backpack"){
+      image.src = "minecraft.png";
+      button.innerHTML = "Now this Epic";
+      state = "minecraft";
+    }
+  }
+  var button2 = document.createElement("button");
+  var buttonText = document.createTextNode("Clicker");
+  button2.appendChild(buttonText);
+  button2.setAttribute("onClick", "picChange()");
+  button2.setAttribute("id", "bubblegum");
+  document.body.appendChild(button2);
+  var button3 = document.createElement("button");
+  var buttonText = document.createTextNode("Adder");
+  button3.appendChild(buttonText);
+  button3.setAttribute("onClick", "picChange()");
+  button3.setAttribute("id", "dab");
+  document.body.appendChild(button3);
+  function hideImg(){
+    pic.style.display = "none"
+    
+  }
+  function showImg(){
+    pic.style.display = "block"
+  }
+  var image = document.getElementById('image');
+  var button = document.getElementById('picButton');
   var x = 3;
   var y = 4;
   var z = x + y;
@@ -75,8 +127,14 @@
   var c = 890;
   var d = 2;
   var e = a + b + c + d;
-  var word = "Poggers" + " " + "in" + " " + "chat";
   var ptext = document.getElementById('ptext');
-  ptext.innerHTML = word;
+  var w = 7;
+  if (w > 6){
+    ptext.innerHTML = "This is about to get epic";
+  }
+  else{
+    ptext.innerHTML = "Poggers" + " " + "in" + " " + "chat";
+  }
 </script>
 </body>
+</html>

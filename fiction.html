@@ -1,0 +1,174 @@
+<html lang="en-us" id="document">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Adrian Lindhardt</title>
+    <style type="text/css">
+    #document {
+      margin-top: 2%;
+      margin-bottom: 2%;
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+    #Title {
+      font-family: Georgia;
+    }
+    #Contact_Me {
+      font-family: Georgia;
+      font-size: 36px;
+    }
+    #container {
+        position:absolute;
+        top: 12%;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        background: black;
+    }
+    #leftpane {
+        width: 50%;
+        height: 100%;
+        float: left;
+    }
+    #rightpane {
+        width: 50%;
+        height: 100%;
+        float: left;
+    }
+    #storytext {
+        width: 100%;
+        height: 90%;
+        float: left;
+    }
+    #buttons {
+        width: 100%;
+        height: 10%;
+        float: left;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .btn {
+      margin: 2%;
+    }
+    #graphic {
+      max-height: 100%;
+      max-width: 100%;
+      width: 100%;
+      height: 100%;
+    }
+    #text {
+      color: white;
+    }
+  </style>
+  </head>
+<body>
+    <table width="100%">
+  		<th><div id="Title">
+  		<h1>Adrian Lindhardt</h1>
+  	</div>
+  	</th>
+  	<th><div id="Menu">
+  	<ul class="nav nav-pills justify-content-end">
+  <li class="nav-item">
+    <a class="nav-link" href="index.html">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="aboutme.html">About Me</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="resume.html">Resume</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="projects.html">Projects</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="contactme.html">Contact Me</a>
+  </li>
+</ul>
+</div>
+</th>
+</table>
+    <div id="container">
+        <div id="leftpane">
+          <img id="graphic" src="https://i.kym-cdn.com/entries/icons/original/000/017/403/218_copy.jpg"></img>
+         </div>
+        <div id="rightpane">
+            <div id="storytext">
+                <p id="text">This is epic</p>
+            </div>
+            <div id="buttons">
+                <button id="button1" onClick="buttonclick(1)" type="button" class="btn">Warning</button>
+                <button id="button2" onClick="buttonclick(2)" type="button" class="btn">Warning</button>
+                <button id="button3" onClick="buttonclick(3)" type="button" class="btn">Warning</button>
+                <button id="button4" onClick="buttonclick(4)" type="button" class="btn">Warning</button>
+            </div>
+        </div>
+    </div>
+    <script>
+      var graphic = document.getElementById("graphic")
+      var text = document.getElementById("text")
+      var button1 = document.getElementById("button1")
+      var button2 = document.getElementById("button2")
+      var button3 = document.getElementById("button3")
+      var button4 = document.getElementById("button4")
+      var state = "intro"
+      
+      function buttonclick(button){
+        if (state == "intro"){
+          if (button == 1){
+            state = "Gamers"
+            Gamers()
+          }
+          else if (button == 2){
+            state = "Furries"
+            Furries()
+          }
+        }
+        else if(state == "Gamers"){
+          //button checks
+        }
+        else if(state == "Furries"){
+          //button checks
+        }
+      }
+      function intro (){
+        text.innerHTML = "It was a chilly summer night in Florida, Mr. Landfries and his partner Sans go abord a cruise ship to investigate the sightings of the Furries. The Furries, already abord the ship, are on vacation from their long season. Eblo Pascobar and Bernice were the spies for them. Will you side with the Furries or the Gamers?"
+        text.style.fontSize = 24px
+        button1.innerHTML = "Gamers"
+        button1.style.display = "block"
+        button2.innerHTML = "Furries"
+        button2.style.display = "block"
+        button3.style.display = "none"
+        button4.style.display = "none"
+        graphic.src = "https://c.wallhere.com/photos/53/6c/1600x1200_px_Cruise_Ship-817823.jpg!d"
+      }
+      function Gamers (){
+        text.innerHTML = "Yeet"
+        button1.innerHTML = "Skrt"
+        button1.style.display = "block"
+        button2.innerHTML = "Dab"
+        button2.style.display = "block"
+        button3.innerHTML = "Run"
+        button3.style.display = "block"
+        button4.innerHTML = "Go Home"
+        button4.style.display = "block"
+        graphic.src = "https://vignette.wikia.nocookie.net/topstrongest/images/e/ef/Tumblr_nvu3r3kZzg1r8g2mko1_1280.gif/revision/latest?cb=20151108160717"
+      }
+      function Furries (){
+        text.innerHTML = "Gottem"
+        button1.innerHTML = "Talk"
+        button1.style.display = "block"
+        button2.innerHTML = "Dab"
+        button2.style.display = "block"
+        button3.innerHTML = "Run"
+        button3.style.display = "block"
+        button4.innerHTML = "Cry"
+        button4.style.display = "block"
+        graphic.scr = ""
+      }
+      intro()
+    </script>
+</body>
+</html>
