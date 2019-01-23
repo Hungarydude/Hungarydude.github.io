@@ -109,10 +109,15 @@
     <script>
       var graphic = document.getElementById("graphic")
       var text = document.getElementById("text")
+      text.style.fontSize = 36
       var button1 = document.getElementById("button1")
+      button1.style.fontSize = 24
       var button2 = document.getElementById("button2")
+      button2.style.fontSize = 24
       var button3 = document.getElementById("button3")
+      button3.style.fontSize = 24
       var button4 = document.getElementById("button4")
+      button4.style.fontSize = 24
       var state = "intro"
       
       function buttonclick(button){
@@ -132,40 +137,138 @@
         else if(state == "Furries"){
           //button checks
         }
+        if (state == "Gamers"){
+          if (button == 1){
+            state = "HideOrAttack"
+            HideOrAttack()
+          }
+          else if(state == "HideOrAttack"){
+            //button checks
+          }
+        }
+        if (state == "Furries"){
+          if (button == 1){
+            state = "Investigate"
+            Investigate()
+          }
+          else if (state == "Investigate"){
+            //button checks
+          }
+        }
       }
       function intro (){
-        text.innerHTML = "It was a chilly summer night in Florida, Mr. Landfries and his partner Sans go abord a cruise ship to investigate the sightings of the Furries. The Furries, already abord the ship, are on vacation from their long season. Eblo Pascobar and Bernice were the spies for them. Will you side with the Furries or the Gamers?"
-        text.style.fontSize = 24px
+        text.innerHTML = "It was a chilly summer night in Florida, Mr. Landfries and his partner Sans go abord a cruise ship to investigate the sightings of the Furries. The Furries, already abord the ship, are on vacation from their long season. Eblo Pascobar and Bernice were the spies for them. Will you side with the Furries or the Gamers?<br></br>Miami Port- July 20th, 23:45<br></br>Furry or Gamer?"
         button1.innerHTML = "Gamers"
         button1.style.display = "block"
         button2.innerHTML = "Furries"
         button2.style.display = "block"
         button3.style.display = "none"
         button4.style.display = "none"
-        graphic.src = "https://c.wallhere.com/photos/53/6c/1600x1200_px_Cruise_Ship-817823.jpg!d"
+        graphic.src = "/Ship.jpg"
       }
       function Gamers (){
-        text.innerHTML = "Yeet"
-        button1.innerHTML = "Skrt"
+        text.innerHTML = "You are allied with the Gamers, Mr. Landfries and Sans will be helping you.<br></br>Mr. Landfries receives a message from Chief Chris P. Bacon about the enemy furries on board the ship."
+        button1.innerHTML = "Next"
         button1.style.display = "block"
-        button2.innerHTML = "Dab"
-        button2.style.display = "block"
-        button3.innerHTML = "Run"
-        button3.style.display = "block"
-        button4.innerHTML = "Go Home"
-        button4.style.display = "block"
-        graphic.src = "https://vignette.wikia.nocookie.net/topstrongest/images/e/ef/Tumblr_nvu3r3kZzg1r8g2mko1_1280.gif/revision/latest?cb=20151108160717"
+        button2.style.display = "none"
+        button3.style.display = "none"
+        button4.style.display = "none"
+        graphic.src = "/Gamers.gif"
       }
       function Furries (){
-        text.innerHTML = "Gottem"
+        text.innerHTML = "You are allied with the Furries, Eblo and Bernice will be helping you.<br></br>You are going to be working with the furry gang which includes Eblo Pascobar and Bernice, the rest of the Furries have diceased or either died in the tsunami that hit about week ago. The Furries have recieved intel from the camers that the gamers have aboard the ship."
+        button1.innerHTML = "Next"
+        button1.style.display = "block"
+        button2.style.display = "none"
+        button3.style.display = "none"
+        button4.style.display = "none"
+        graphic.scr = "https://lh3.googleusercontent.com/-RQjbb5A0fao/AAAAAAAAAAI/AAAAAAAAABQ/F2y7etZnI5Q/w360-h203-p-rw/photo.jpg"
+      }
+      function HideOrAttack (){
+        text.innerHTML = ""
+        button1.innerHTML = "Hide"
+        button1.style.display = "block"
+        button2.innerHTML = "Attack"
+        button2.style.display = "block"
+        button3.style.display = "none"
+        button4.style.display = "none"
+        graphic.scr = ""
+      }
+      function Investigate (){
+        text.innerHTML = ""
         button1.innerHTML = "Talk"
         button1.style.display = "block"
         button2.innerHTML = "Dab"
         button2.style.display = "block"
         button3.innerHTML = "Run"
         button3.style.display = "block"
-        button4.innerHTML = "Cry"
-        button4.style.display = "block"
+        button4.style.display = "none"
+        graphic.scr = ""
+      }
+      function GamersCaptured (){
+        text.innerHTML = ""
+        button1.innerHTML = "Talk"
+        button1.style.display = "block"
+        button2.innerHTML = "Dab"
+        button2.style.display = "block"
+        button3.innerHTML = "Run"
+        button3.style.display = "block"
+        button4.style.display = "none"
+        graphic.scr = ""
+      }
+      function Interrogate(){
+        text.innerHTML = ""
+        button1.innerHTML = "Talk"
+        button1.style.display = "block"
+        button2.innerHTML = "Dab"
+        button2.style.display = "block"
+        button3.innerHTML = "Run"
+        button3.style.display = "block"
+        button4.style.display = "none"
+        graphic.scr = ""
+      }
+      function FleeOrLoyal(){
+        text.innerHTML = ""
+        button1.innerHTML = "Talk"
+        button1.style.display = "block"
+        button2.innerHTML = "Dab"
+        button2.style.display = "block"
+        button3.innerHTML = "Run"
+        button3.style.display = "block"
+        button4.style.display = "none"
+        graphic.scr = ""
+      }
+      function Escape(){
+        text.innerHTML = ""
+        button1.innerHTML = "Talk"
+        button1.style.display = "block"
+        button2.innerHTML = "Dab"
+        button2.style.display = "block"
+        button3.innerHTML = "Run"
+        button3.style.display = "block"
+        button4.style.display = "none"
+        graphic.scr = ""
+      }
+      function End1(){
+        text.innerHTML = ""
+        button1.innerHTML = "Talk"
+        button1.style.display = "block"
+        button2.innerHTML = "Dab"
+        button2.style.display = "block"
+        button3.innerHTML = "Run"
+        button3.style.display = "block"
+        button4.style.display = "none"
+        graphic.scr = ""
+      }
+      function End2(){
+        text.innerHTML = ""
+        button1.innerHTML = "Talk"
+        button1.style.display = "block"
+        button2.innerHTML = "Dab"
+        button2.style.display = "block"
+        button3.innerHTML = "Run"
+        button3.style.display = "block"
+        button4.style.display = "none"
         graphic.scr = ""
       }
       intro()
